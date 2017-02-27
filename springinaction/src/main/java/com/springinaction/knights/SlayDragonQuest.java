@@ -21,7 +21,7 @@ public class SlayDragonQuest implements Quest {
 
     @Override
     public void embark() {
-        stream.println("Embarking on quest to slay the dragon");
+        stream.println("Embarking on quest to slay the dragon!");
     }
 
 }

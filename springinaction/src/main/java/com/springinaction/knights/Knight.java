@@ -9,6 +9,7 @@ package com.springinaction.knights;
  *
  * @author Teodor Todorov
  */
-interface Knight {
+public interface Knight {
 
+    public void embarkOnQuest();
 }
