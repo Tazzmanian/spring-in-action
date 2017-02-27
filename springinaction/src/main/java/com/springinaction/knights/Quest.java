@@ -9,8 +9,8 @@ package com.springinaction.knights;
  *
  * @author Teodor Todorov
  */
-interface Quest {
+public interface Quest {
 
-    public void embark();
+    void embark();
 
 }
