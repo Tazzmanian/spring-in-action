@@ -9,11 +9,11 @@ package com.springinaction.knights;
  *
  * @author Teodor Todorov
  */
-public class DamselRescuingKnight implements Knight {
+public class BraveKnight implements Knight {
 
     private Quest quest;
 
-    public DamselRescuingKnight(Quest quest) {
+    public BraveKnight(Quest quest) {
         this.quest = quest;
     }
 
