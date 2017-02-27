@@ -9,7 +9,7 @@ package com.springinaction.knights;
  *
  * @author Teodor Todorov
  */
-class RescueDamselQuest {
+class Quest {
 
     void embark() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
