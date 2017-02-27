@@ -9,10 +9,8 @@ package com.springinaction.knights;
  *
  * @author Teodor Todorov
  */
-class Quest {
+interface Quest {
 
-    void embark() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+    public void embark();
 
 }
