@@ -18,8 +18,8 @@ import org.springframework.test.context.junit4.SpringRunner;
  * @author Teodor Todorov
  */
 @RunWith(SpringRunner.class)
-//@SpringBootTest
-@ContextConfiguration(classes = CDPlayerConfig.class)
+@SpringBootTest
+//@ContextConfiguration(classes = CDPlayerConfig.class)
 public class CDPlayerTest {
 
     @Autowired
