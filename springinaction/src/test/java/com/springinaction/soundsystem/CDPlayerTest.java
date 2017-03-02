@@ -6,7 +6,9 @@
 package com.springinaction.soundsystem;
 
 import org.junit.Assert;
+import org.junit.Rule;
 import org.junit.Test;
+import org.junit.contrib.java.lang.system.SystemOutRule;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -22,11 +24,23 @@ import org.springframework.test.context.junit4.SpringRunner;
 //@ContextConfiguration(classes = CDPlayerConfig.class)
 public class CDPlayerTest {
 
+    @Rule
+    public final SystemOutRule log = new SystemOutRule();
+
+    @Autowired
+    private MediaPlayer player;
+
     @Autowired
     private CompactDisk compactDisk;
 
     @Test
     public void cdShouldNotBeNull() {
         Assert.assertNotNull(compactDisk);
+    }
+
+    @Test
+    public void play() {
+//        player.play();
+//        Assert.assertEquals("Playing Sgt. Pepper's Lonely Hearts Club Band by The Beatles\n", log.getLog());
     }
 }
