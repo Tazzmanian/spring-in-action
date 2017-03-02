@@ -5,6 +5,7 @@
  */
 package com.springinaction.soundsystem;
 
+import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
@@ -13,7 +14,17 @@ import org.springframework.context.annotation.Configuration;
  * @author Teodor Todorov
  */
 @Configuration
-@ComponentScan
+//@ComponentScan
 public class CDPlayerConfig {
+
+    @Bean
+    public CompactDisk sgtPeppers() {
+        return new SgtPeppers();
+    }
+
+    @Bean
+    public MediaPlayer cdPlayer() {
+        return new CDPlayer(sgtPeppers());
+    }
 
 }

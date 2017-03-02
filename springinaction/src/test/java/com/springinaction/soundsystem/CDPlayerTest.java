@@ -40,7 +40,9 @@ public class CDPlayerTest {
 
     @Test
     public void play() {
-//        player.play();
-//        Assert.assertEquals("Playing Sgt. Pepper's Lonely Hearts Club Band by The Beatles\n", log.getLog());
+        log.clearLog();
+        log.enableLog();
+        player.play();
+        Assert.assertTrue(log.getLogWithNormalizedLineSeparator().compareTo("Playing Sgt. Pepper's Lonely Hearts Club Band by The Beatles\n") == 0);
     }
 }
