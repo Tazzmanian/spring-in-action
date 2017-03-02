@@ -25,7 +25,7 @@ import org.springframework.test.context.junit4.SpringRunner;
 public class CDPlayerTest {
 
     @Rule
-    public final SystemOutRule log = new SystemOutRule();
+    public final SystemOutRule log = new SystemOutRule().enableLog();
 
     @Autowired
     private MediaPlayer player;
@@ -41,8 +41,8 @@ public class CDPlayerTest {
     @Test
     public void play() {
         log.clearLog();
-        log.enableLog();
         player.play();
-        Assert.assertTrue(log.getLogWithNormalizedLineSeparator().compareTo("Playing Sgt. Pepper's Lonely Hearts Club Band by The Beatles\n") == 0);
+        //Assert.assertTrue(log.getLogWithNormalizedLineSeparator().compareTo("Playing Sgt. Pepper's Lonely Hearts Club Band by The Beatles\n") == 0);
+        Assert.assertEquals("Playing Sgt. Pepper's Lonely Hearts Club Band by The Beatles\n", log.getLogWithNormalizedLineSeparator());
     }
 }
