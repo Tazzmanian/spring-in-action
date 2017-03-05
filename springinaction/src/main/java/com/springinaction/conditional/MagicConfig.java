@@ -13,6 +13,12 @@ import org.springframework.context.annotation.Configuration;
  *
  * @author Tazzmanian
  */
-public class MagicBean {
+@Configuration
+class MagicConfig {
 
+    @Bean
+    @Conditional(MagicExistCondition.class)
+    public MagicBean magicBean() {
+        return new MagicBean();
+    }
 }
